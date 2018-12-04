@@ -2,7 +2,7 @@
 
 # A snake game made with Rust
 
-## Run `cargo run` to run the app, run `cargo build` to build an executable file. 
+## Run `cargo run` to run the app, run `cargo build` to build an executable file.
 
 ### Check out the Youtube Tutorial for this [Rust Tutorial](https://youtu.be/DnT_7M7L7vo).  Here is our [Youtube Channel](https://www.youtube.com/channel/UCYqCZOwHbnPwyjawKfE21wg) Subscribe for more content.
 
