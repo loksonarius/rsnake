@@ -2,7 +2,7 @@
 
 _Snake clone done in Rust_
 
-![Sample Game](https://imgur.com/ObGkhfH)
+![Sample Game](https://i.imgur.com/ObGkhfH.gif)
 
 Forked from [Tensor Programming's
 snake-tutorial](https://github.com/tensor-programming/snake-tutorial)
@@ -39,7 +39,5 @@ things. I'll be recording progress on this below.
 - [ ] Make fruit dissapear over time
 - [ ] Add eating sound effect
 - [ ] Add home screen
-
-### Features
 
 [:snake:](https://github.com/loksonarius/rsnake)
