@@ -3,6 +3,62 @@ use piston_window::types::Color;
 
 const BLOCK_SIZE: f64 = 15.0;
 
+const DIGIT_WIDTH: usize = 4;
+const DIGIT_HEIGHT: usize = 4;
+
+const DIGIT_FILL: [[bool; DIGIT_WIDTH * DIGIT_HEIGHT]; 10] = [
+    [false,  true,  true, false,
+     false,  true, false,  true,
+     false,  true, false,  true,
+     false, false,  true,  true,
+    ], // 0
+    [false,  true,  true,  true,
+     false, false,  true,  true,
+     false, false,  true,  true,
+     false, false,  true,  true,
+    ], // 1
+    [false,  true,  true,  true,
+     false, false, false,  true,
+     false,  true,  true, false,
+     false,  true,  true,  true,
+    ], // 2
+    [false,  true,  true,  true,
+     false, false, false,  true,
+     false, false,  true,  true,
+     false,  true,  true,  true,
+    ], // 3
+    [false,  true, false,  true,
+     false,  true,  true,  true,
+     false,  true,  true,  true,
+     false, false, false,  true,
+    ], // 4
+    [false,  true, true,  true,
+     false,  true, false, false,
+     false, false,  true,  true,
+     false,  true,  true,  true,
+    ], // 5
+    [false, false,  true,  true,
+     false,  true, false, false,
+     false,  true,  true,  true,
+     false,  true,  true,  true,
+    ], // 6
+    [false,  true,  true,  true,
+     false, false, false,  true,
+     false, false,  true,  true,
+     false, false, false,  true,
+    ], // 7
+    [false,  true,  true,  true,
+     false,  true, false,  true,
+     false,  true,  true,  true,
+     false,  true,  true,  true,
+    ], // 8
+    [false,  true,  true,  true,
+     false,  true,  true,  true,
+     false, false, false,  true,
+     false, false, false,  true,
+    ], // 9
+];
+
 pub fn to_coord(game_coord: i32) -> f64 {
     (game_coord as f64) * BLOCK_SIZE
 }
