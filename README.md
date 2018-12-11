@@ -2,7 +2,7 @@
 
 _Snake clone done in Rust_
 
-![Sample Game](https://i.imgur.com/ObGkhfH.gif)
+![Sample Game](https://i.imgur.com/YNQqj31.gif)
 
 Forked from [Tensor Programming's
 snake-tutorial](https://github.com/tensor-programming/snake-tutorial)
