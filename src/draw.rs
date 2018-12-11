@@ -103,3 +103,35 @@ pub fn draw_rectangle(
         g,
     );
 }
+
+pub fn draw_number(
+    color: Color,
+    number: u32,
+    x: i32,
+    y: i32,
+    con: &Context,
+    g: &mut G2d,
+) {
+    let mut num = number;
+    let mut left_start = x - DIGIT_WIDTH as i32;
+
+    loop {
+        let digit = num as usize % 10;
+
+        for i in 0..(DIGIT_WIDTH * DIGIT_HEIGHT) {
+            let fill = DIGIT_FILL[digit][i];
+            let draw_x = left_start + (i % DIGIT_WIDTH) as i32;
+            let draw_y = y + (i / DIGIT_WIDTH) as i32;
+
+            if fill {
+                draw_block(color, draw_x, draw_y, con, g);
+            }
+        }
+
+        left_start -= DIGIT_WIDTH as i32;
+        num /= 10;
+        if num == 0 {
+            break;
+        }
+    }
+}
